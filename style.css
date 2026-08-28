@@ -267,7 +267,45 @@ background-color: #f5f6f7;
     transform: scale(1.05);
 }
 
+/*Seccion Contacto*/
 
+
+.contacto .rectangulo{
+    margin-top: -5rem;
+    background-color: rgb(13,110,253);
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 1px rgba(17, 15, 15, 0.5);
+}
+.contacto .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contacto .descripcion{
+    padding: 20px;
+    color: #050505;
+    font-size: 1.2rem;
+}
+.contacto button{
+    color: gray;
+    font-weight: bold;
+    background-color: black;
+    border: 2px solid #fff;
+    padding: 1.25em 2em;
+    margin:10px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+.contacto button:hover{
+    background-color: #454444;
+    color:#f9f2f2;
+    transform: scale(1.1);
+}
+.contacto button i{
+    color:#636b74;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
 /*adaptación para dispositivos móviles */
 @media screen and (max-width: 767px) {
     .navbar-brand {
@@ -277,7 +315,30 @@ background-color: #f5f6f7;
 .heroImage{
     animation: flotar 4s ease-in-out infinite;
 }
+/* --- DISEÑO RESPONSIVO PARA MÓVILES --- */
 
+/* Cuando la pantalla sea de 767px de ancho o menos (móviles y tablets pequeñas) */
+@media (max-width: 767px) {
+    .proyectos-contenedor {
+        /* Cambiamos la cuadrícula a una sola columna */
+        grid-template-columns: 1fr;
+        
+        /* Ajustamos el espaciado para que se vea mejor en móvil */
+        gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    .proyectos-recientes img {
+        width: 100%;
+        height: auto; /* Ajustamos la altura automáticamente para mantener la proporción */
+    }
+    
+    /* Escalamos el tamaño del título principal para que no sea tan grande */
+    .proyectos-recientes h2 { /* Asumiendo que tu título es un h2 */
+        font-size: 28px;
+    }
+}
 @keyframes flotar{
 
     0%{
